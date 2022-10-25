@@ -31,13 +31,15 @@ body {
           position: relative;
           top: 25px;
           left: 100px; }
-        body .page .section .gameplay .obstacle {
+        body .page .section .gameplay #obstacle {
           width: 20px;
           height: 20px;
           background-color: #0f3f63;
           border-radius: 50%;
           position: relative;
           left: 420px; }
+        body .page .section .gameplay .obstacleAnimation {
+          animation: animation-obstacle 1.5s infinite linear; }
     body .page .buttons {
       margin-top: 10px; }
       body .page .buttons #sauter {
@@ -48,7 +50,8 @@ body {
         width: 120px;
         height: 30px;
         margin-right: 10px;
-        border-radius: 5px; }
+        border-radius: 5px;
+        cursor: pointer; }
       body .page .buttons #start {
         background-color: #fff;
         border: none;
@@ -57,8 +60,14 @@ body {
         width: 120px;
         height: 30px;
         margin-right: 10px;
-        border-radius: 5px; }
+        border-radius: 5px;
+        cursor: pointer; }
 
+@keyframes animation-obstacle {
+  0% {
+    left: 420px; }
+  100% {
+    left: 0px; } }
 @media screen and (max-width: 520px) {
   body .page .section {
     width: 400px;
@@ -68,7 +77,7 @@ body {
       body .page .section .gameplay img {
         top: 25px;
         left: 70px; }
-      body .page .section .gameplay .obstacle {
+      body .page .section .gameplay #obstacle {
         left: 320px; } }
 
 /*# sourceMappingURL=style.css.map */

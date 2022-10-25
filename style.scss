@@ -32,13 +32,16 @@ body {
           top: 25px;
           left: 100px;
         }
-        .obstacle {
+        #obstacle {
           width: 20px;
           height: 20px;
           background-color: #0f3f63;
           border-radius: 50%;
           position: relative;
           left: 420px;
+        }
+        .obstacleAnimation {
+          animation: animation-obstacle 1.5s infinite linear;
         }
       }
     }
@@ -53,6 +56,7 @@ body {
         height: 30px;
         margin-right: 10px;
         border-radius: 5px;
+        cursor: pointer;
       }
       #start {
         background-color: #fff;
@@ -63,8 +67,17 @@ body {
         height: 30px;
         margin-right: 10px;
         border-radius: 5px;
+        cursor: pointer;
       }
     }
+  }
+}
+@keyframes animation-obstacle {
+  0% {
+    left: 420px;
+  }
+  100% {
+    left: 0px;
   }
 }
 @media screen and (max-width: 520px) {
@@ -79,7 +92,7 @@ body {
             top: 25px;
             left: 70px;
           }
-          .obstacle {
+          #obstacle {
             left: 320px;
           }
         }

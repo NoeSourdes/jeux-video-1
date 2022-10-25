@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/NoeSourdes/jeux-video-1/issues"
   },
-  "homepage": "https://github.com/NoeSourdes/jeux-video-1#readme"
+  "homepage": "https://github.com/NoeSourdes/jeux-video-1#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
 }

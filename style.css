@@ -1,3 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none; }
 
+body {
+  background-color: #3782b9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; }
+  body .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body .page .section {
+      background-color: #fff;
+      padding: 30px;
+      width: 500px;
+      height: 300px;
+      border-radius: 10px; }
+      body .page .section .gameplay {
+        border-bottom: 1px solid #3782b9;
+        position: relative;
+        top: 170px;
+        overflow: hidden; }
+        body .page .section .gameplay img {
+          width: 50px;
+          position: relative;
+          top: 25px;
+          left: 100px; }
+        body .page .section .gameplay .obstacle {
+          width: 20px;
+          height: 20px;
+          background-color: #0f3f63;
+          border-radius: 50%;
+          position: relative;
+          left: 420px; }
+    body .page .buttons {
+      margin-top: 10px; }
+      body .page .buttons #sauter {
+        background-color: #fff;
+        border: none;
+        color: #3782b9;
+        font-size: 1.2em;
+        width: 120px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 5px; }
+      body .page .buttons #start {
+        background-color: #fff;
+        border: none;
+        color: #3782b9;
+        font-size: 1.2em;
+        width: 120px;
+        height: 30px;
+        margin-right: 10px;
+        border-radius: 5px; }
+
+@media screen and (max-width: 520px) {
+  body .page .section {
+    width: 400px;
+    height: 200px; }
+    body .page .section .gameplay {
+      top: 70px; }
+      body .page .section .gameplay img {
+        top: 25px;
+        left: 70px; }
+      body .page .section .gameplay .obstacle {
+        left: 320px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -41,35 +41,46 @@ body .page #restart #phrase {
   font-size: 25px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+body .page #restart .buttonRestart #yes {
+  margin-top: 15px;
+  background-color: rgb(247, 118, 118);
+  border: 1px solid rgb(247, 118, 118);
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: #fff;
+  cursor: pointer;
+}
 body .page .section {
   z-index: -1;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
 }
-body .page .section .gameplay {
+body .page .section #gameplay {
   border-bottom: 1px solid #333;
   height: 250px;
   width: 500px;
   position: relative;
   overflow: hidden;
 }
-body .page .section .gameplay #compteur {
+body .page .section #gameplay #compteur {
   position: absolute;
   top: 0;
   right: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body .page .section .gameplay img {
+body .page .section #gameplay img {
   width: 50px;
   height: 50px;
   position: absolute;
   bottom: 0;
+  left: 100px;
 }
-body .page .section .gameplay .persoAnimation {
+body .page .section #gameplay .persoAnimation {
   animation: perso-animation 0.5s infinite linear;
 }
-body .page .section .gameplay #obstacle {
+body .page .section #gameplay #obstacle {
   width: 20px;
   height: 20px;
   background-color: #333;
@@ -78,11 +89,25 @@ body .page .section .gameplay #obstacle {
   left: 480px;
   bottom: 0;
 }
-body .page .section .gameplay .obstacleAnimation {
+body .page .section #gameplay .obstacleAnimation {
   animation: animation-obstacle 1.5s infinite linear;
 }
+body .page .section #gameplay #obstacle2 {
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  left: 480px;
+  bottom: 0;
+}
+body .page .section #gameplay .obstacle2Animation {
+  animation: animation2-obstacle 1.5s infinite linear;
+  animation-delay: 0.75s;
+}
 body .page .buttons {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 body .page .buttons #sauter {
   background-color: #fff;
@@ -115,6 +140,14 @@ body .page .buttons #start {
     left: -20px;
   }
 }
+@keyframes animation2-obstacle {
+  0% {
+    left: 500px;
+  }
+  100% {
+    left: -20px;
+  }
+}
 @keyframes perso-animation {
   0% {
     bottom: 0;
@@ -127,12 +160,27 @@ body .page .buttons #start {
   }
 }
 @media screen and (max-width: 600px) {
-  body .page .section .gameplay {
+  body .page .section #gameplay {
     width: 400px;
     height: 200px;
   }
-  body .page .section .gameplay img {
+  body .page .section #gameplay img {
     width: 40px;
+    height: 40px;
+    left: 80px;
+  }
+  body .page .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  body .page .buttons #sauter {
+    margin-top: 60px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border-radius: 50%;
   }
 }
 

@@ -183,5 +183,11 @@ body .page .buttons #start {
     border-radius: 50%;
   }
 }
+@media screen and (max-width: 450px) {
+  body .page .section #gameplay {
+    width: 320px;
+    height: 150px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
